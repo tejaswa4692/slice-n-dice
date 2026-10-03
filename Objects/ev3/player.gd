@@ -1,22 +1,23 @@
 extends CharacterBody3D
+class_name Player
 
-@onready var animation_tree: AnimationTree = $AnimationTree
-@onready var camera_3d: Camera3D = $Camera3D
+@onready var walk_controller: PlayerWalkController = $PlayerWalkController
+@onready var raycast_circle: Node3D = $RaycastCircle
 
-var speed := 0.5
-var acceleration := 2.5
-var walk_blend := 0.0
+@onready var playermesh: Node3D = $rig
 
-func _process(delta: float) -> void:
-	var walking := Input.is_key_pressed(KEY_W)
 
-	if walking:
-		velocity.x = move_toward(velocity.x, speed, acceleration * delta)
-		walk_blend = lerp(walk_blend, 1.0, delta * 5.0)
+var canmove: bool = true
+
+func _ready() -> void:
+	$Step1.play()
+
+func _physics_process(delta: float) -> void:
+	walk_controller.apply_gravity(self, delta)
+	if canmove:
+		walk_controller.update(self, delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, acceleration * delta)
-		walk_blend = lerp(walk_blend, 0.0, delta * 5.0)
-
-	animation_tree.set("parameters/Walk/blend_amount", walk_blend)
-
+		walk_controller.stop(self, delta)
 	move_and_slide()
+	walk_controller.lean(playermesh, delta)
+	walk_controller.update_animation(delta)

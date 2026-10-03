@@ -1,0 +1,17 @@
+3 oct 2026
+
+Holy fuck this should be 3rd devlog of this game but today i got one of the most undocumented and most annoying things to work
+
+I got blenders rigify root motion working properly in godot
+
+heres how i did it
+
+First make the animation you want to create
+Normally blender doesnt have all DEF bones as child of root thats why some bones keep moving forward
+to fix that go to search in your outliner in blender and in that look for MCH-torso.parent bone
+Go in edit mode and select that bone, then reparent it to root, Now you will see that all your DEF bones work with root motion
+but theres an issue, when you move the root forward the bones we just added have double transform
+to fix that select the MCH-torso.parent in pose mode then go in bone constraitns it will already have a SWITCH_PARENT constraint added to it, set the influence from 1 to a 0 and your double transform will be fixed
+
+Now when importing to godot firsly select your root bone and then in bone properties add it as a deform bone
+and then when exporting it as gltf remember to export only deform bones, and boom it will work now
