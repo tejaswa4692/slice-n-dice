@@ -15,3 +15,16 @@ to fix that select the MCH-torso.parent in pose mode then go in bone constraitns
 
 Now when importing to godot firsly select your root bone and then in bone properties add it as a deform bone
 and then when exporting it as gltf remember to export only deform bones, and boom it will work now
+
+3 oct 2026
+
+Working upon yesterdays work today i started works on getting the leg positions right, 
+I made the animation it looks right in game, but idk why the flowy motion of the arms and legs is gone in the current rigged.glb
+it looks much more robotic and rigid, I tried to changing the mode to bezier but that didnt seem to fix it 
+earlier i couldve sworn it was much flowy
+
+anyways arart from that i implemented a frontflip animation (its named backflip dont come at me i didnt know what its called)\
+and made a really nice state machine with promising transitions
+https://www.youtube.com/watch?v=6d8UsisQ2Ew
+
+Uploaded a video on yt if yall wanna check it out
