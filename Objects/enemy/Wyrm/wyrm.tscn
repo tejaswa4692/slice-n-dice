@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dieqn3o7de5a0"]
+
+[ext_resource type="Script" uid="uid://x5o6mo1xtfk3" path="res://Objects/enemy/Wyrm/wyrm.gd" id="1_dyxrp"]
+[ext_resource type="Script" uid="uid://0mf3pma8qurt" path="res://Objects/enemy/Wyrm/shoot_projectile.gd" id="2_7nyfe"]
+
+[node name="Wyrm" type="Node3D" unique_id=1363220471]
+script = ExtResource("1_dyxrp")
+segment_spacing = 5.27
+head_size = 15.0
+tail_size = 15.0
+wave_amplitude = 5.635
+wave_phase = 6.715
+speed = 10.305
+orbit_radius = 18.185
+
+[node name="ShootProjectile" type="Node" parent="." unique_id=11941747]
+script = ExtResource("2_7nyfe")
+
+[node name="VomitTimer" type="Timer" parent="." unique_id=558464272]
+autostart = true
+
+[connection signal="timeout" from="VomitTimer" to="ShootProjectile" method="shoot_timer_timeout"]

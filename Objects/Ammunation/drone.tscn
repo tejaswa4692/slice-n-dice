@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://btcd12e8hyx2c"]
+
+[ext_resource type="Script" uid="uid://geb3bjilxmgf" path="res://Objects/Ammunation/drone.gd" id="1_cfr5o"]
+[ext_resource type="PackedScene" uid="uid://b74ve6qr1wu3o" path="res://Assets/Drone/Drone.blend" id="1_haa5n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v2i7q"]
+size = Vector3(0.4934082, 0.23394775, 0.3729248)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v2i7q"]
+radius = 4.0041895
+
+[node name="Drone" type="CharacterBody3D" unique_id=400382998]
+script = ExtResource("1_cfr5o")
+
+[node name="Drone" parent="." unique_id=996884701 instance=ExtResource("1_haa5n")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1410945118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018310547, 0.12020874, -0.0010375977)
+shape = SubResource("BoxShape3D_v2i7q")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=451708528]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1010807730]
+shape = SubResource("SphereShape3D_v2i7q")

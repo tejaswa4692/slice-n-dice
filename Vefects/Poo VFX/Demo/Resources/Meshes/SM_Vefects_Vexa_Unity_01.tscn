@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://wr32cvw34tuc"]
+
+[ext_resource type="Mesh" uid="uid://ctl720os50tni" path="res://Vefects/Poo VFX/Demo/Resources/Meshes/SM_Vefects_Vexa_Unity_01_Static.tres" id="1_746a0"]
+[ext_resource type="Material" uid="uid://b864rtw8k55mo" path="res://Vefects/Poo VFX/Demo/Resources/Materials/M_Vexa_Body.tres" id="2_f859f"]
+[ext_resource type="Material" uid="uid://1e7gmsntjxl4" path="res://Vefects/Poo VFX/Demo/Resources/Materials/M_vexa_front_hair_2_retopo_Vexa_hair.tres" id="3_793a5"]
+[ext_resource type="Material" uid="uid://bavm06pmufnxm" path="res://Vefects/Poo VFX/Demo/Resources/Materials/M_Vexa_Jacket.tres" id="4_84556"]
+[ext_resource type="Material" uid="uid://dx705vlopm1bm" path="res://Vefects/Poo VFX/Demo/Resources/Materials/M_Vexa_Logo.tres" id="5_73f7c"]
+
+[node name="SM_Vefects_Vexa_Unity_01" type="MeshInstance3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = ExtResource("1_746a0")
+cast_shadow = 1
+surface_material_override/0 = ExtResource("2_f859f")
+surface_material_override/1 = ExtResource("3_793a5")
+surface_material_override/2 = ExtResource("4_84556")
+surface_material_override/3 = ExtResource("5_73f7c")

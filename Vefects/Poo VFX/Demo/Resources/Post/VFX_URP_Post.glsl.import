@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://b8666wsfabkuh"
+path="res://.godot/imported/VFX_URP_Post.glsl-e2d43c88b54ee7f5818f7e901468ff87.res"
+
+[deps]
+
+source_file="res://Vefects/Poo VFX/Demo/Resources/Post/VFX_URP_Post.glsl"
+dest_files=["res://.godot/imported/VFX_URP_Post.glsl-e2d43c88b54ee7f5818f7e901468ff87.res"]
+
+[params]
+

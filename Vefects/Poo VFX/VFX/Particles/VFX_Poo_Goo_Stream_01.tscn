@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cgqnefcyux0uy"]
+
+[ext_resource type="ArrayMesh" uid="uid://qq76cklgbcgw" path="res://Vefects/Poo VFX/VFX/Meshes/SM_VFX_Smooth_Sphere_01_Static.tres" id="2_5b189"]
+[ext_resource type="Material" uid="uid://cb74p150sxdd5" path="res://Vefects/Poo VFX/VFX/Materials/M_VFX_URP_Poo_Goo_Stream_01_Mesh.tres" id="3_e5cd7"]
+
+[node name="VFX_Poo_Goo_Stream_01" type="Node3D" unique_id=842981717]
+transform = Transform3D(-1e-07, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -1e-07, 0, 1.5, -0.69)
+
+[node name="Goo Mesh" type="MeshInstance3D" parent="." unique_id=1471665598]
+mesh = ExtResource("2_5b189")
+surface_material_override/0 = ExtResource("3_e5cd7")

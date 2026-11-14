@@ -1,0 +1,34 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bk103aywd7al8"]
+
+[ext_resource type="Shader" uid="uid://cut2do7tk6m7o" path="res://Vefects/Poo VFX/Shared/Shaders/SH_Vefects_VFX_URP_Poo_Goo_Splash_01.gdshader" id="1_070db"]
+[ext_resource type="Texture2D" uid="uid://blaxi5x2jkbks" path="res://Vefects/Poo VFX/VFX/Textures/T_VFX_Poo_Feces_Splashes_01.tga" id="2_b4050"]
+[ext_resource type="Texture2D" uid="uid://don4u420nuv5i" path="res://Vefects/Poo VFX/VFX/Textures/T_VFX_Poo_Feces_Splashes_01_N.tga" id="3_94260"]
+[ext_resource type="Texture2D" uid="uid://d3t1o3wweu18n" path="res://Vefects/Poo VFX/VFX/Textures/Noises/T_VFX_Noise_01.tga" id="4_0031c"]
+
+[resource]
+shader = ExtResource("1_070db")
+shader_parameter/color01 = Color(0.1981132, 0.139943, 0.0909576, 1)
+shader_parameter/color02 = Color(0.0941176, 0.054902, 0.0431373, 1)
+shader_parameter/color03 = Color(0.2352941, 0.1215686, 0.0352941, 1)
+shader_parameter/color_fresnel = Color(0.5568628, 0.2313726, 0, 1)
+shader_parameter/hue_shift = 0
+shader_parameter/emission = 0.1
+shader_parameter/specular = 0.001
+shader_parameter/smoothness_min = 0.5
+shader_parameter/smoothness_max = 0.96
+shader_parameter/noise_texture = ExtResource("2_b4050")
+shader_parameter/noise_texture_sampling = Vector3i(1, 1, 0)
+shader_parameter/noise_texture_normal = ExtResource("3_94260")
+shader_parameter/noise_texture_normal_sampling = Vector3i(1, 1, 1)
+shader_parameter/normal_intensity = 1
+shader_parameter/noise_texture_distortion = ExtResource("4_0031c")
+shader_parameter/noise_texture_distortion_sampling = Vector3i(0, 0, 1)
+shader_parameter/noise_texture_distortion_scale = Vector4(0.5, 0.5, 0, 0)
+shader_parameter/noise_texture_distortion_pan = Vector4(-0.05, -0.1, 0, 0)
+shader_parameter/noise_distortion_lerp = 0.03
+shader_parameter/fresnel_scale = 1
+shader_parameter/fresnel_power = 3
+shader_parameter/fresnel_bias = 0
+shader_parameter/erosion_smoothness = 0.1
+shader_parameter/screen_space_reflections = 1
+shader_parameter/screen_space_reflections_contribute_transparent = 1

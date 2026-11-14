@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c1afvi2i4cjti"]
+
+[ext_resource type="PackedScene" uid="uid://dtja37qfvoc5b" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_01_Floor_Rot.tscn" id="1_88a77"]
+[ext_resource type="PackedScene" uid="uid://dwf8bt06yh182" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_Directional_01_Floor_GS_Pure_02.tscn" id="2_808ba"]
+[ext_resource type="PackedScene" uid="uid://dl4veg0o277p3" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Goo_01.tscn" id="3_131bb"]
+[ext_resource type="PackedScene" uid="uid://bkwslisk1bdb" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_Directional_01_Floor.tscn" id="4_d9a9e"]
+[ext_resource type="PackedScene" uid="uid://ec1kc0vcgi4g" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_Directional_01_Floor_Bunch.tscn" id="5_44b9e"]
+[ext_resource type="PackedScene" uid="uid://ca7expo2leh1b" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poorojectile_01_Demo.tscn" id="6_5cbfa"]
+[ext_resource type="PackedScene" uid="uid://cnh5tbfgd580r" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_Directional_01_Floor_GS_Pure.tscn" id="7_30f73"]
+[ext_resource type="PackedScene" uid="uid://cdp2u2ab35x3e" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splash_01_Loop.tscn" id="8_59c38"]
+[ext_resource type="PackedScene" uid="uid://coowqfk8h7pal" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_01_Floor_Rot_GS_Pure.tscn" id="9_6dd36"]
+[ext_resource type="PackedScene" uid="uid://df1uta5f6346h" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Drips_Puddle_01.tscn" id="10_76a21"]
+[ext_resource type="PackedScene" uid="uid://dxgryuc7c3vi6" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_01_Floor_Bunch_Rand.tscn" id="11_75bf8"]
+[ext_resource type="PackedScene" uid="uid://dpvc56a8bokn6" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Drips_01.tscn" id="12_143b6"]
+[ext_resource type="PackedScene" uid="uid://bgl1v6cqikygl" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_01_Floor.tscn" id="13_38f2d"]
+[ext_resource type="PackedScene" uid="uid://cgqnefcyux0uy" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Goo_Stream_01.tscn" id="14_54091"]
+[ext_resource type="PackedScene" uid="uid://corielkoygd8" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_01_Floor_Rot_GS_Pure_02.tscn" id="15_1d9f3"]
+[ext_resource type="PackedScene" uid="uid://cklpcji6k8r3n" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_02_Floor_Rot.tscn" id="16_35cbd"]
+[ext_resource type="PackedScene" uid="uid://bpm2xb78q57qo" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splat_Directional_01_Floor_Rot.tscn" id="17_113ba"]
+[ext_resource type="PackedScene" uid="uid://cxrwithuj4yrh" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Splash_01_Col_Loop.tscn" id="18_4a463"]
+
+[node name="_ VFX" type="Node3D"]
+
+[node name="VFX_Poo_Splat_01_Floor_Rot" parent="." instance=ExtResource("1_88a77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1.25)
+
+[node name="VFX_Poo_Splat_Directional_01_Floor_GS_Pure_02" parent="." instance=ExtResource("2_808ba")]
+transform = Transform3D(1.4142224, 0, -1.4142048, 0, 2, 0, 1.4142048, 0, 1.4142224, -50, 0, -1.25)
+
+[node name="VFX_Poo_Goo_01" parent="." instance=ExtResource("3_131bb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10, 2, -1.25)
+
+[node name="VFX_Poo_Splat_Directional_01_Floor" parent="." instance=ExtResource("4_d9a9e")]
+transform = Transform3D(0.7071078, 0, -0.7071057, 0, 1, 0, 0.7071057, 0, 0.7071078, -30, 0, -1.75)
+
+[node name="VFX_Poo_Splat_Directional_01_Floor_Bunch" parent="." instance=ExtResource("5_44b9e")]
+transform = Transform3D(-0.707107, 0, 0.7071065, 0, 1, 0, -0.7071065, 0, -0.707107, -40, 0, -1.25)
+
+[node name="VFX_Poorojectile_01_Demo" parent="." instance=ExtResource("6_5cbfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -1.25)
+
+[node name="VFX_Poo_Splat_Directional_01_Floor_GS_Pure" parent="." instance=ExtResource("7_30f73")]
+transform = Transform3D(1.4142224, 0, -1.4142048, 0, 2, 0, 1.4142048, 0, 1.4142224, -45, 0, -1.25)
+
+[node name="VFX_Poo_Splash_01_Loop" parent="." instance=ExtResource("8_59c38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -1.25)
+
+[node name="VFX_Poo_Splat_01_Floor_Rot_GS_Pure" parent="." instance=ExtResource("9_6dd36")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15, 0, -1.25)
+
+[node name="VFX_Poo_Drips_Puddle_01" parent="." instance=ExtResource("10_76a21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -1.25)
+
+[node name="VFX_Poo_Splat_01_Floor_Bunch_Rand" parent="." instance=ExtResource("11_75bf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -1.25)
+
+[node name="VFX_Poo_Drips_01" parent="." instance=ExtResource("12_143b6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -1.25)
+
+[node name="VFX_Poo_Splat_01_Floor" parent="." instance=ExtResource("13_38f2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.25)
+
+[node name="VFX_Poo_Goo_Stream_01" parent="." instance=ExtResource("14_54091")]
+transform = Transform3D(-1e-07, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -1e-07, 10, 2, -1.25)
+visible = false
+
+[node name="VFX_Poo_Splat_01_Floor_Rot_GS_Pure_02" parent="." instance=ExtResource("15_1d9f3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -20, 0, -1.25)
+
+[node name="VFX_Poo_Splat_02_Floor_Rot" parent="." instance=ExtResource("16_35cbd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 0, -1.25)
+
+[node name="VFX_Poo_Splat_Directional_01_Floor_Rot" parent="." instance=ExtResource("17_113ba")]
+transform = Transform3D(-1.4142141, 0, 1.414213, 0, 2, 0, -1.414213, 0, -1.4142141, -35, 0, -1.25)
+
+[node name="VFX_Poo_Splash_01_Col_Loop" parent="." instance=ExtResource("18_4a463")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -1.25)

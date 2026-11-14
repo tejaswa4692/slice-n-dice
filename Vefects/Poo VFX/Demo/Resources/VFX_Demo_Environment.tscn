@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://byon82xe3spvt"]
+
+[ext_resource type="Shader" uid="uid://f2khwkhojmsl" path="res://Vefects/Poo VFX/Demo/Resources/Shaders/SH_VFX_Demo_Sky.gdshader" id="1_fc8ea"]
+[ext_resource type="Texture2D" uid="uid://c1lbbexnrwxjh" path="res://Vefects/Poo VFX/Demo/Resources/Textures/Poo_VFX_Sky.exr" id="2_0c090"]
+[ext_resource type="Script" uid="uid://hnplajvq846k" path="res://Vefects/Poo VFX/Demo/Resources/Post/VFX_URP_Post.gd" id="3_6a1c1"]
+[ext_resource type="Texture2D" uid="uid://fy6454n5nyei" path="res://Vefects/Poo VFX/Demo/Resources/Post/Poo_VFX_Display_LUT.exr" id="4_ed669"]
+[ext_resource type="Mesh" uid="uid://ih0s532mbgba" path="res://Vefects/Poo VFX/Shared/Meshes/Unity Builtin/Plane_Static.tres" id="5_4a176"]
+[ext_resource type="Material" uid="uid://dcqao8tmgd5do" path="res://Vefects/Poo VFX/Demo/Resources/Materials/M_Vefects_Grid_01.tres" id="6_6f883"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_9fac1"]
+shader = ExtResource("1_fc8ea")
+shader_parameter/panorama = ExtResource("2_0c090")
+
+[sub_resource type="Sky" id="Sky_87c24"]
+sky_material = SubResource("ShaderMaterial_9fac1")
+radiance_size = 2
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_9b106"]
+background_mode = 2
+sky = SubResource("Sky_87c24")
+ambient_light_source = 2
+ambient_light_color = Color(0.5, 0.5, 0.5, 1)
+ambient_light_energy = 1
+ambient_light_sky_contribution = 0.0
+reflected_light_source = 1
+tonemap_mode = 0
+tonemap_exposure = 1.0
+glow_enabled = false
+ssao_enabled = true
+ssao_radius = 0.3
+ssao_intensity = 2
+ssao_light_affect = 0.25
+
+[sub_resource type="CompositorEffect" id="CompositorEffect_1f453"]
+script = ExtResource("3_6a1c1")
+bloom_enabled = true
+bloom_threshold = 1
+bloom_intensity = 1
+bloom_scatter = 0.5
+bloom_high_quality_filtering = true
+bloom_skip_iterations = 0
+tonemap_aces = true
+display_lut = ExtResource("4_ed669")
+chromatic_aberration = 0.169
+vignette_intensity = 0.1
+vignette_smoothness = 1
+
+[sub_resource type="Compositor" id="Compositor_b8db8"]
+compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_1f453")])
+
+[node name="VFX_Demo_Environment" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_9b106")
+compositor = SubResource("Compositor_b8db8")
+
+[node name="Directional Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.7071069, 0.7071068, 0, -0.7071068, -0.7071069, 0, 2, 0)
+light_color = Color(1.0, 1.0, 1.0, 1)
+light_energy = 5
+light_specular = 1.0
+shadow_enabled = true
+shadow_opacity = 1
+directional_shadow_max_distance = 50
+directional_shadow_split_1 = 0.123
+directional_shadow_split_2 = 0.2926
+directional_shadow_split_3 = 0.536
+directional_shadow_blend_splits = true
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, 0)
+mesh = ExtResource("5_4a176")
+material_override = ExtResource("6_6f883")
+cast_shadow = 1
+
+[node name="Floor Collision" type="GPUParticlesCollisionBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(2000, 1, 2000)

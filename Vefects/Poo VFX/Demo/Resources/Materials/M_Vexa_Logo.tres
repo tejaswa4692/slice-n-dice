@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dx705vlopm1bm"]
+
+[ext_resource type="Shader" uid="uid://bfah08t1gk1ro" path="res://Vefects/Poo VFX/Demo/Resources/Shaders/SH_VFX_URP_Lit_Simple.gdshader" id="1_67343"]
+[ext_resource type="Texture2D" uid="uid://c7a3b6enqucns" path="res://Vefects/Poo VFX/Demo/Resources/Textures/T_VFX_Lush_HDRI_01_R_225.hdr" id="2_d305c"]
+
+[resource]
+shader = ExtResource("1_67343")
+shader_parameter/base_color = Vector3(0.7999999, 0.7999999, 0.7999999)
+shader_parameter/metallic = 0
+shader_parameter/smoothness = 0.5
+shader_parameter/urp_reflection = ExtResource("2_d305c")
+shader_parameter/urp_reflection_intensity = 1.333
+shader_parameter/urp_reflection_lod_offset = -0.5931094

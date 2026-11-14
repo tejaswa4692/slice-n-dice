@@ -1,0 +1,44 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cb74p150sxdd5"]
+
+[ext_resource type="Shader" uid="uid://deiic0cadh6vg" path="res://Vefects/Poo VFX/Shared/Shaders/SH_Vefects_VFX_URP_Poo_Goo_Stream_01_Mesh.gdshader" id="1_2fafa"]
+[ext_resource type="Texture2D" uid="uid://b2oklxx2e666n" path="res://Vefects/Poo VFX/VFX/Textures/Noises/T_VFX_Noise_04.tga" id="2_170c0"]
+[ext_resource type="Texture2D" uid="uid://d3whyqyql2avm" path="res://Vefects/Poo VFX/VFX/Textures/Noises/T_VFX_Noise_04_N.tga" id="3_fb91a"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2fafa")
+shader_parameter/color01 = Color(0.5254902, 0.5294118, 0.14117648, 1)
+shader_parameter/color02 = Color(0.09411765, 0.3019608, 0.043137256, 1)
+shader_parameter/color03 = Color(0.23529412, 0.19215687, 0.03529412, 1)
+shader_parameter/color_fresnel = Color(0.12156863, 0.59607846, 0, 1)
+shader_parameter/hue_shift = 0.0
+shader_parameter/emission = 0.05
+shader_parameter/specular = 0.01
+shader_parameter/smoothness_min = 0.8
+shader_parameter/smoothness_max = 0.96
+shader_parameter/noise_texture = ExtResource("2_170c0")
+shader_parameter/noise_texture_sampling = Vector3i(0, 0, 1)
+shader_parameter/noise_texture_scale = Vector4(1, 2, 0, 0)
+shader_parameter/noise_texture_pan = Vector4(-0.1, -0.4, 0, 0)
+shader_parameter/noise_texture_normal = ExtResource("3_fb91a")
+shader_parameter/noise_texture_normal_sampling = Vector3i(0, 0, 1)
+shader_parameter/normal_intensity = 1.0
+shader_parameter/noise_texture_distortion = ExtResource("2_170c0")
+shader_parameter/noise_texture_distortion_sampling = Vector3i(0, 0, 1)
+shader_parameter/noise_texture_distortion_scale = Vector4(1, 2, 0, 0)
+shader_parameter/noise_texture_distortion_pan = Vector4(0.05, -0.5, 0, 0)
+shader_parameter/noise_distortion_lerp = 0.2
+shader_parameter/fresnel_scale = 1.0
+shader_parameter/fresnel_power = 3.0
+shader_parameter/fresnel_bias = 0.0
+shader_parameter/wpo_intensity1 = 0.05
+shader_parameter/wpo_sine_time = 3.77
+shader_parameter/wpo_sine_intensity = 0.333
+shader_parameter/wpo_min = -0.3
+shader_parameter/wpo_max = 0.5
+shader_parameter/wpo_band_erosion = 0.3
+shader_parameter/wpo_band_erosion_smoothness = 1.0
+shader_parameter/wpo_collapse_width = -1.0
+shader_parameter/wpo_collapse_lerp = 0.0
+shader_parameter/screen_space_reflections = 1.0
+shader_parameter/screen_space_reflections_contribute_transparent = 1.0

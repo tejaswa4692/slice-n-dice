@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://crp8473uly5nd"]
+
+[ext_resource type="PackedScene" uid="uid://byon82xe3spvt" path="res://Vefects/Poo VFX/Demo/Resources/VFX_Demo_Environment.tscn" id="1_fe390"]
+[ext_resource type="PackedScene" uid="uid://wr32cvw34tuc" path="res://Vefects/Poo VFX/Demo/Resources/Meshes/SM_Vefects_Vexa_Unity_01.tscn" id="2_98e48"]
+[ext_resource type="PackedScene" uid="uid://c1afvi2i4cjti" path="res://Vefects/Poo VFX/Demo/Resources/Prefabs/_ VFX.tscn" id="3_b057d"]
+
+[node name="Poo VFX URP" type="Node3D"]
+
+[node name="VFX_Demo_Environment" parent="." instance=ExtResource("1_fe390")]
+
+[node name="_ Post" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="_ Post"]
+transform = Transform3D(-0.707107, -0.2418447, 0.6644631, 0.0, 0.9396926, 0.3420201, -0.7071068, 0.2418447, -0.6644633, 11.25, 1.69, -2.5)
+fov = 90
+near = 0.3
+far = 1000
+current = true
+
+[node name="_ Vexa" type="Node3D" parent="."]
+
+[node name="SM_Vefects_Vexa_Unity_01" parent="_ Vexa" instance=ExtResource("2_98e48")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="SM_Vefects_Vexa_Unity_01 (1)" parent="_ Vexa" instance=ExtResource("2_98e48")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -30, 0, 0)
+
+[node name="_ VFX" parent="." instance=ExtResource("3_b057d")]

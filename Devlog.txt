@@ -43,3 +43,9 @@ Man istg getting the protag right is gonna take sm of the time i dont even know 
 on the storyline for this game
 
 Atleast i was able to learn blender bro but thats not the goal, the goal is to make a banger ass game
+
+10 oct 2026
+
+finally exams ended, i have started works again, today i worked on getting the sword bone right for the rig and i rougly got it right
+i also worked on making enemy hitable and killable with a really nice hitbox system that works with the animation player so i can have precise
+contorl of WHEN the enetities should be damaged 

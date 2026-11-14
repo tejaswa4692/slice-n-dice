@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gopdkgfc8pmi"]
+
+[ext_resource type="Script" uid="uid://bch4gv3ar8u5" path="res://Objects/enemy/Wyrm/vomit_projectile.gd" id="1_n5onb"]
+[ext_resource type="PackedScene" uid="uid://cgqnefcyux0uy" path="res://Vefects/Poo VFX/VFX/Particles/VFX_Poo_Goo_Stream_01.tscn" id="4_tslig"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v2i7q"]
+radius = 3.6503906
+height = 7.3007813
+
+[node name="VomitProjectile" type="Node3D" unique_id=1608973285]
+script = ExtResource("1_n5onb")
+speed = 25.0
+lead_time = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1105167074]
+mesh = SubResource("CapsuleMesh_v2i7q")
+
+[node name="VFX_Poo_Goo_Stream_01" parent="." unique_id=842981717 instance=ExtResource("4_tslig")]
+transform = Transform3D(-1.908002e-07, 0, -4.365, 0, 4.365, 0, 4.365, 0, -1.908002e-07, 0, 0, 0)

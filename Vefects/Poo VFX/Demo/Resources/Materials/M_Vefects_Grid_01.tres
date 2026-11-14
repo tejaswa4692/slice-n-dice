@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dcqao8tmgd5do"]
+
+[ext_resource type="Shader" uid="uid://dd0cjwrul5no7" path="res://Vefects/Poo VFX/Demo/Resources/Shaders/SH_Vefects_Grid_01.gdshader" id="1_c1ab6"]
+[ext_resource type="Texture2D" uid="uid://yk2ae5q6nvk6" path="res://Vefects/Poo VFX/Demo/Resources/Textures/T_VFX_Grid_01_Masks.tga" id="2_5821c"]
+[ext_resource type="Texture2D" uid="uid://yb86fo16nkyv" path="res://Vefects/Poo VFX/Demo/Resources/Textures/T_VFX_Grid_01_Texture.tga" id="3_af4d9"]
+[ext_resource type="Texture2D" uid="uid://bu2qgqltsrk2v" path="res://Vefects/Poo VFX/Demo/Resources/Textures/T_VFX_Grid_01_Normal.tga" id="4_e6c15"]
+[ext_resource type="Texture2D" uid="uid://c7a3b6enqucns" path="res://Vefects/Poo VFX/Demo/Resources/Textures/T_VFX_Lush_HDRI_01_R_225.hdr" id="5_9290b"]
+
+[resource]
+shader = ExtResource("1_c1ab6")
+shader_parameter/masks = ExtResource("2_5821c")
+shader_parameter/texture_map = ExtResource("3_af4d9")
+shader_parameter/normal_map = ExtResource("4_e6c15")
+shader_parameter/tile_overall = 400
+shader_parameter/tile_x = 1
+shader_parameter/tile_y = 1
+shader_parameter/texture_tile_overall = 1
+shader_parameter/masks_tile_overall = 1
+shader_parameter/normal_intensity = 2
+shader_parameter/roughness_min = 0.45
+shader_parameter/roughness_max = 0.3
+shader_parameter/specular = 0.01
+shader_parameter/random_tile_colors_max = 1
+shader_parameter/color_overall = Vector3(0.0331048, 0.0331048, 0.0331048)
+shader_parameter/color_01 = Vector3(1, 1, 1)
+shader_parameter/color_02 = Vector3(0.5911141, 0.5911141, 0.5911141)
+shader_parameter/urp_reflection = ExtResource("5_9290b")
+shader_parameter/urp_reflection_intensity = 1.333
+shader_parameter/urp_reflection_lod_offset = -0.5931094

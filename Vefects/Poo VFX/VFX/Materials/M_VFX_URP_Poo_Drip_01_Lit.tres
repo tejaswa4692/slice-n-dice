@@ -1,0 +1,47 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bkh34f5tq3ow5"]
+
+[ext_resource type="Shader" uid="uid://lh4ytoq676kk" path="res://Vefects/Poo VFX/Shared/Shaders/SH_Vefects_VFX_URP_Poo_Debris_01_Lit.gdshader" id="1_db6bf"]
+[ext_resource type="Texture2D" uid="uid://erwxpyuujflu" path="res://Vefects/Poo VFX/VFX/Textures/LUTs/T_VFX_Poo_LUT_02.tga" id="2_32e73"]
+[ext_resource type="Texture2D" uid="uid://cqgm50m6kqsif" path="res://Vefects/Poo VFX/VFX/Textures/T_VFX_Poo_Feces_Pieces_01_N.tga" id="3_93aa4"]
+[ext_resource type="Texture2D" uid="uid://8g23m4cns85s" path="res://Vefects/Poo VFX/VFX/Textures/Noises/T_VFX_Perlin_01_N.TGA" id="4_b4b5b"]
+[ext_resource type="Texture2D" uid="uid://bhcvbnu1kubd3" path="res://Vefects/Poo VFX/VFX/Textures/T_VFX_Poo_Feces_Pieces_01.tga" id="5_35e83"]
+
+[resource]
+shader = ExtResource("1_db6bf")
+shader_parameter/flat_color = 0
+shader_parameter/specular = 0.001
+shader_parameter/smoothness = 1
+shader_parameter/emission_multiply = 0
+shader_parameter/opacity_multiply = 1
+shader_parameter/depth_fade = 0.02
+shader_parameter/lut = ExtResource("2_32e73")
+shader_parameter/lut_sampling = Vector3i(1, 1, 1)
+shader_parameter/lut_amplitude = 1
+shader_parameter/lut_offset = 0
+shader_parameter/lut_speed = 0
+shader_parameter/lut_hue_shift = 0
+shader_parameter/lut_hue_shift_speed = 0
+shader_parameter/lut_desaturate = 0
+shader_parameter/lut_value_intensity = 0.3
+shader_parameter/lut_erodes = 0
+shader_parameter/lut_erodes_masks = 0
+shader_parameter/lut_invert = 0
+shader_parameter/normal_texture = ExtResource("3_93aa4")
+shader_parameter/normal_texture_sampling = Vector3i(1, 1, 1)
+shader_parameter/normal_intensity = 1
+shader_parameter/distortion_texture = ExtResource("4_b4b5b")
+shader_parameter/distortion_texture_sampling = Vector3i(0, 0, 1)
+shader_parameter/noise_distortion_uvs = Vector4(0.7, 0.7, 0, 0)
+shader_parameter/noise_distortion_uv_pan = Vector4(0.033, 0.077, 0, 0)
+shader_parameter/distortion_intensity = 3
+shader_parameter/erosion_texture = ExtResource("5_35e83")
+shader_parameter/erosion_texture_sampling = Vector3i(1, 1, 0)
+shader_parameter/erosion_uvs = Vector4(1, 1, 0, 0)
+shader_parameter/erosion_uv_pan = Vector4(0, 0, 0, 0)
+shader_parameter/erosion_intensity = 0
+shader_parameter/erosion_smoothness = 1
+shader_parameter/opacity_mask_st = Vector4(1, 1, 0, 0)
+shader_parameter/opacity_mask_erosion = 0
+shader_parameter/opacity_mask_erosion_smoothness = 1
+shader_parameter/screen_space_reflections = 1
+shader_parameter/screen_space_reflections_contribute_transparent = 1

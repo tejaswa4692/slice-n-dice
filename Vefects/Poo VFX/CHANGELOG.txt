@@ -1,0 +1,19 @@
+VEFECTS - POO VFX for GODOT
+CHANGELOG
+
+1.0.3 (2026-10-21)
+- New Shared/Scripts/Vefects_VFX_Controller.gd: attached to any parent node, it plays, pauses, stops and restarts every
+  particle system under it from Inspector buttons, in the editor and in game, and can replay them every few
+  seconds (Auto Replay), one-shot effects included.
+
+1.0.2 (2026-10-19)
+- Particle shader: the values driven by custom data curves (erosion, dissolve...) now decode exactly at the
+  start and end of the curve. Before, a particle whose erosion curve reached exactly 0 or 1 could be drawn as
+  a full square instead of disappearing.
+
+1.0.1 (2026-10-17)
+- LICENSE.txt: added the copyright year and stated explicitly that the effects may not be sold or
+  redistributed as transformative or derivative works. No changes to the effects.
+
+1.0.0 (2026-10-17)
+- First release for Godot 4.7.
